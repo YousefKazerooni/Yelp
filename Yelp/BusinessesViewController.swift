@@ -16,7 +16,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //flag for infinite scroll
     var isMoreDataLoading = false
-    //var loadMoreOffset = 20
+    var loadMoreOffset = 20
     var loadingMoreView: InfiniteScrollActivityView?
     var selectedCategories: [String]?
     
@@ -159,6 +159,8 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     func loadMoreData() {
         Business.searchWithTerm("restaurant", completion: { (businesses: [Business]!, error: NSError!) -> Void in
             self.businesses = businesses
+            
+            self.businesses.appendContentsOf(businesses)
             // Update flag
             self.isMoreDataLoading = false
             
@@ -166,6 +168,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             self.loadingMoreView!.stopAnimating()
             self.tableView.reloadData()
         })
+    
         
     }
       
