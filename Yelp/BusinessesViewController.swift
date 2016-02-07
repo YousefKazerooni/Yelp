@@ -18,6 +18,11 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         tableView.delegate = self
         tableView.dataSource = self
+        //After setting up the height using autolayout in the storyboard
+        //we must specify here that the height must change
+        //***must always be used in conjuction with estimatedrowheight
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
         
 
         Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in

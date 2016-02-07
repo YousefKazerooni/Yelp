@@ -37,8 +37,16 @@ class BusinessCell: UITableViewCell {
         thumbImageView.layer.cornerRadius = 3
         thumbImageView.clipsToBounds = true
         
+        //to aleviate the bug with wrapping texts
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
         
-        
+    }
+    
+    //To aleviate the bug with wrapping when turning
+    //the view
+    
+    override func layoutSubviews() {
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
