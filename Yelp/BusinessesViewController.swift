@@ -53,7 +53,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         
        
 
-        Business.searchWithTerm("restaurant", completion: { (businesses: [Business]!, error: NSError!) -> Void in
+        Business.searchWithTerm("Restaurants", completion: { (businesses: [Business]!, error: NSError!) -> Void in
             self.businesses = businesses
             self.tableView.reloadData()
         
@@ -157,21 +157,47 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //using api request to load more data
     func loadMoreData() {
-        Business.searchWithTerm("restaurant", completion: { (businesses: [Business]!, error: NSError!) -> Void in
-            self.businesses = businesses
-            
-            self.businesses.appendContentsOf(businesses)
-            // Update flag
-            self.isMoreDataLoading = false
-            
-            // Stop the loading indicator
-            self.loadingMoreView!.stopAnimating()
-            self.tableView.reloadData()
+        
+       
+        Business.searchWithTerm("Restaurants", sort: nil, categories: selectedCategories, deals: nil, completion: { (businesses: [Business]!, error: NSError!) -> Void in
+            if error != nil {
+                
+                    self.loadingMoreView?.stopAnimating()
+                    //TODO: show network error
+                
+            } else {
+                
+                    self.loadMoreOffset += 20
+                    self.businessesBackup.appendContentsOf(businesses)
+                    self.tableView.reloadData()
+                    self.loadingMoreView?.stopAnimating()
+                    self.isMoreDataLoading = false
+                
+            }
         })
+    }
     
         
-    }
-      
+
+    
+        
+//        Business.searchWithTerm("restaurant", completion: { (businesses: [Business]!, error: NSError!) -> Void in
+//            self.businesses = businesses
+//            
+//            //self.businesses.appendContentsOf(businesses)
+//            // Update flag
+//            self.isMoreDataLoading = false
+//            
+//            // Stop the loading indicator
+//            self.loadingMoreView!.stopAnimating()
+//            self.tableView.reloadData()
+//        })
+//    
+//        
+//    }
+    
+  
+    
     
     
     //>>>>>>>>>>>>>>>>>>>>Infinite Scroll
