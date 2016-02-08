@@ -15,6 +15,7 @@
 		222D8A7D19CCFAE000D2DB53 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D8A7C19CCFAE000D2DB53 /* YelpClient.swift */; };
 		22AAAA991AEA0A9700A544AF /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AAAA981AEA0A9700A544AF /* Business.swift */; };
 		22AAAA9C1AEA1EC300A544AF /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AAAA9B1AEA1EC300A544AF /* BusinessesViewController.swift */; };
+		6A1CDEC41C68015500C6C704 /* DetailedBusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CDEC31C68015500C6C704 /* DetailedBusinessesViewController.swift */; };
 		6A24C7B91C66A2D000A0859D /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A24C7B81C66A2D000A0859D /* BusinessCell.swift */; };
 		6A24C7BB1C671DDE00A0859D /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A24C7BA1C671DDE00A0859D /* InfiniteScrollActivityView.swift */; };
 		90B718C590BD546DEFEF0D61 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C5CF4FD317D72ABE2AAC4 /* Pods.framework */; };
@@ -43,6 +44,7 @@
 		222D8A7C19CCFAE000D2DB53 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		22AAAA981AEA0A9700A544AF /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		22AAAA9B1AEA1EC300A544AF /* BusinessesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
+		6A1CDEC31C68015500C6C704 /* DetailedBusinessesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedBusinessesViewController.swift; sourceTree = "<group>"; };
 		6A24C7B81C66A2D000A0859D /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		6A24C7BA1C671DDE00A0859D /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		97D8B2E3FFD1AF4F4A707E47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				22AAAA9B1AEA1EC300A544AF /* BusinessesViewController.swift */,
+				6A1CDEC31C68015500C6C704 /* DetailedBusinessesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A1CDEC41C68015500C6C704 /* DetailedBusinessesViewController.swift in Sources */,
 				6A24C7BB1C671DDE00A0859D /* InfiniteScrollActivityView.swift in Sources */,
 				6A24C7B91C66A2D000A0859D /* BusinessCell.swift in Sources */,
 				22AAAA9C1AEA1EC300A544AF /* BusinessesViewController.swift in Sources */,
